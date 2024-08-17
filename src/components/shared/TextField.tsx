@@ -53,7 +53,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           {...props}
         />
 
-        {helpMessage ? (
+        {helpMessage && (
           <Text
             typography="t7"
             color={labelColor}
@@ -62,7 +62,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           >
             {helpMessage}
           </Text>
-        ) : null}
+        )}
       </div>
     )
   },
