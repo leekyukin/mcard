@@ -10,11 +10,12 @@ function AuthGuard({ children }: { children: React.ReactNode }) {
 
   onAuthStateChanged(auth, (user) => {
     // 유저에 대한 인증 상태가 바뀌면 실행된다.
-    if (user != null) {
+    if (user) {
       setUser({
         uid: user.uid,
         email: user.email ?? '',
         displayName: user.displayName ?? '',
+        photoURL: user.photoURL ?? '',
       })
     } else {
       setUser(null)
